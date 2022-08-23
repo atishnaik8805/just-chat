@@ -1,0 +1,27 @@
+.main-container {
+padding: 5em;
+cursor: auto;
+}
+
+.hero-container {
+
+}
+
+.hero-header {
+font-size: larger;
+font-size: 30px;
+font-family: cursive;
+}
+
+
+.btn-section {
+    display: inline-block;
+    padding: 1em;
+}
+
+.btn {
+    margin:1em;
+    padding: 0.5em;
+    border: 1px solid red;
+    cursor: pointer;
+}
