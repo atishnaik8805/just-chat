@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LogRegPageComponent } from './log-reg-page/log-reg-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
+
+import { AuthenticationGuardGuard } from './authentication-guard.guard';
 
 
 const routes: Routes = [{
@@ -10,11 +14,22 @@ const routes: Routes = [{
 },
 {
   path:  'login',
-  component: LogRegPageComponent
+  component: LogRegPageComponent,
+  canActivate: [AuthenticationGuardGuard]    // Actually quite dumb! Why authenticate for the authenticate page???
 },
 {
 path: 'register',
 component: LogRegPageComponent
+},
+{
+  path: 'home',
+  component: HomeComponent,
+  canActivate: [AuthenticationGuardGuard]  
+},
+//WildCard
+{
+path: '**',
+component: NotFoundComponent
 },
 ];
 

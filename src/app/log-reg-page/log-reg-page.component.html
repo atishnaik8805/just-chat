@@ -1,6 +1,23 @@
+<div class="btn-container">
+    <button class="btn" (click)="logRegChange('')">
+        Home
+    </button>
+    <button class="btn" (click)="logRegChange(buttonTitle)">
+        {{buttonTitle}}
+    </button>
+</div>
+
 <div *ngIf="isLogin;then login else register"></div>
 <ng-template #login>
     <h1>Login</h1>
+    <form [formGroup]="loginForm">
+        <input type="text" placeholder="Username" formControlName="username">
+        <br>
+        <input type="password" placeholder="Password" formControlName="password">
+        <br>
+        <button type="submit">Log In</button>
+    </form>
+    <button class="btn" (click)="googleauthenticate()" #loginRef>Google</button>
 </ng-template>
 
 <ng-template #register>

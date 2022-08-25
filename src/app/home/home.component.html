@@ -1,0 +1,24 @@
+<div class="main-container flex-container wd-100">
+    <div class="left-nav wd-10">
+        <ul>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </ul>
+    </div>
+    <div class="list wd-30">
+        <div *ngFor="let x of contacts">
+            <div>
+                <img src="x.image" alt="x.name"/>
+                <span>{{x.name}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="message-board wd-60">
+        <div class="contact-nav"></div>
+        <div class="message-list"></div>
+        <div class="sending-section"></div>
+    </div>
+</div>
