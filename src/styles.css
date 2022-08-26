@@ -37,15 +37,38 @@
         display: flex;
     }
 
+    .flex-col {
+        flex-direction: column;
+    }
+
+    .space-btw {
+        justify-content: space-around;
+    }
+
 
     /*Width Section propotionally*/
 
+    .wd-5 {
+        width: 5%;
+    }
     .wd-10 {
         width: 10%;
     }
 
+    .wd-20 {
+        width: 20%;
+    }
+
     .wd-30 {
         width: 30%;
+    }
+
+    .wd-40 {
+        width: 40%;
+    }
+    
+    .wd-50 {
+        width: 50%;
     }
 
     .wd-60 {
@@ -54,4 +77,95 @@
 
     .wd-100 {
         width: 100%;
+    }
+
+
+
+    /* Nav */
+    .left-nav {
+    }
+
+
+    /*Height*/
+    .height-100 {
+        height: 100vh;
+    }
+
+    .height-80 {
+        height: 80vh;
+    }
+
+    .height-75 {
+        height: 75vh;
+    }
+
+
+    /*Border*/
+    .rounded-border {
+        border-radius: 1em;
+    }
+
+    .rounded-border-top-bottom-left {
+        border-radius: 1em 0em 0em 1em;
+    }
+
+
+    /* Background*/
+    .black-back {
+        background-color: black;
+    }
+
+    .white-back {
+        background-color: white;
+    }
+
+    .grey-back {
+        background-color: grey;
+    }
+
+
+    /*Color*/
+
+    .white {
+        color: white;
+    }
+
+
+
+    .rounded-image {
+        background-color: red;
+        height: 2em;
+        border-radius: 50%; 
+    }
+
+    .center {
+        margin: 0 auto;
+    }
+
+
+    /*Padding*/
+
+    .pad-1em {
+        padding: 1em;
+    }
+
+
+    /*Search Bar*/
+    .search {
+        
+    }
+
+
+
+    /*Utility*/
+    .top-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .cards-container {
+        padding: 0.5em;
+        margin: 0 auto;
+        width: 80%;
     }

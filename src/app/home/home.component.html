@@ -1,24 +1,48 @@
-<div class="main-container flex-container wd-100">
-    <div class="left-nav wd-10">
-        <ul>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-        </ul>
-    </div>
-    <div class="list wd-30">
-        <div *ngFor="let x of contacts">
-            <div>
-                <img src="x.image" alt="x.name"/>
-                <span>{{x.name}}</span>
+<div class="main-container grey-back">
+    <div class=" flex-container border rounded-border white-back wd-100 height-75">
+        <div class="left-nav flex-container rounded-border-top-bottom-left black-back white flex-col space-btw wd-5">
+                <div class="profile-icon">
+                    <img class="rounded-image center wd-50"/>
+                </div>
+                <div class="nav-icons">
+                    <div>Home</div>
+                    <div>Messages</div>
+                    <div>Box thingy</div>
+                    <div>Groups</div>
+                    <div>Notifications</div>
+                    <div>Options</div>
+                </div>
+                <div class="profile-settings">3</div>
+        </div>
+        <div class="list pad-1em wd-40">
+            <div class="top-section">
+                <input class="search" type="search" placeholder="Enter for Search"/>
+            </div>
+            <div class="top-section">
+                <label>Sort By:</label>
+                <select>
+                    <option>Lastest First</option>
+                    <option>Some Random</option>
+                </select>
+            </div>
+            <div class="cards-container" *ngFor="let x of contacts">
+                <div class="card">
+                    <div class="contact-info flex-container">
+                        <img class="rounded-image wd-10" src="x.image" alt=""/>
+                        <div class="wd-60">
+                            <h4>{{x.name}}</h4>
+                            <span>online</span>
+                        </div>
+                        <span>Time</span>
+                    </div>
+                    <span>Latest Msg....</span>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="message-board wd-60">
-        <div class="contact-nav"></div>
-        <div class="message-list"></div>
-        <div class="sending-section"></div>
+        <div class="message-board wd-60">
+            <div class="contact-nav"></div>
+            <div class="message-list"></div>
+            <div class="sending-section"></div>
+        </div>
     </div>
 </div>
