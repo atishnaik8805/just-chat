@@ -22,7 +22,7 @@
       "es2020",
       "dom"
     ],
-    "types": ["gapi", "gapi.auth2", "jest", "mocha"],
+    "types": ["gapi", "gapi.auth2", "jest", "mocha", "cypress"],
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
