@@ -32,6 +32,9 @@ export class LogRegPageComponent implements OnInit {
   });
 
   ngOnInit(): void {
+    if (this.auth.isUserLoggedIn()) {
+      this.router.navigateByUrl('/home')
+    }
      this.isLogin = this.route.snapshot.url[0].path === 'login' ? true : false;
      if (this.isLogin === false) {
       this.buttonTitle = 'Login'}

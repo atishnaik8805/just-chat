@@ -14,7 +14,9 @@ export class AuthenticationGuardGuard implements CanActivate, CanActivateChild, 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+      console.log(route);
+      console.log(state);
+      return this.authenticate();
   }
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,

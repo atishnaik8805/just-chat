@@ -14,8 +14,8 @@ const routes: Routes = [{
 },
 {
   path:  'login',
-  component: LogRegPageComponent,
-  canActivate: [AuthenticationGuardGuard]    // Actually quite dumb! Why authenticate for the authenticate page???
+  component: LogRegPageComponent
+      // Actually quite dumb! Why authenticate for the authenticate page???
 },
 {
 path: 'register',

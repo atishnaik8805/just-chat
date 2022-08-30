@@ -34,12 +34,17 @@ export class AuthenticationService {
   }
 
   isUserLoggedIn(): boolean {
-    if (localStorage.getItem("token") != null) {
+    if (localStorage.getItem("access_token") != null) {
       return true;
     }
     return false;
   }
 
+  private setToken(token:any, type:string) {
+    console.log(token.Cc)
+    console.log(token)
+    localStorage.setItem(type, JSON.stringify(token));
+  }
 
   //Google OAuth
 
@@ -73,7 +78,7 @@ export class AuthenticationService {
     // Resolve or reject signin Promise
     return new Promise(async (resolve, reject) => {
       await this.googleauthInstance?.signIn().then(
-        user => {this.user = user; resolve(user)},
+        user => {this.user = user;this.setToken(user, 'access_token') ;resolve(user)},
         error => {this.error = error; reject(error)});
     });
   }
