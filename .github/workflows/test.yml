@@ -1,34 +1,35 @@
-#  Name of workflow
-name: Test workflow
+# #  Name of workflow
+# name: Test workflow
 
-# Trigger workflow on all pull requests
-on:
-  pull_request:
-    branches:
-      - dev
-      - master
+# # Trigger workflow on all pull requests
+# on:
+#   pull_request:
+#     branches:
+#       - dev
+#       - master
 
-# Jobs to carry out
-jobs:
-  test:
-    # Operating system to run job on
-    runs-on: ubuntu-latest
-    # Steps in job
-    steps:
-      # Get code from repo
-      - name: Checkout code
-        uses: actions/checkout@v2
-      # Install NodeJS
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-      # Build the app using cypress
-      - name: Cypress run
-        uses: cypress-io/github-action@v4.1.0
-        with:
-          config-file: cypress.config.js
-          build: npm run build
-          start: npm start
-          wait-on: http://localhost:4200
-          browser: chrome
+# # Jobs to carry out
+# jobs:
+#   test:
+#     # Operating system to run job on
+#     runs-on: ubuntu-latest
+#     # Steps in job
+#     steps:
+#       # Get code from repo
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+#       # Install NodeJS
+#       - name: Use Node.js 16.x
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 16.x
+#       # Build the app using cypress
+#       - name: Cypress run
+#         uses: cypress-io/github-action@v4.1.0
+#         with:
+#           config-file: cypress.config.js
+#           spec: cypress/integration/*
+#           build: npm run build
+#           start: npm start
+#           wait-on: http://localhost:4200
+#           browser: chrome
