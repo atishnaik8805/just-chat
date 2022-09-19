@@ -11,10 +11,11 @@
                     <div>Groups</div>
                     <div>Notifications</div>
                     <div>Options</div>
+                    <div (click)="logout($event)">Logout</div>
                 </div>
                 <div class="profile-settings">3</div>
         </div>
-        <div class="list pad-1em wd-40">
+        <div class="list pad-1em wd-40 border-right">
             <div class="top-section">
                 <input class="search" type="search" placeholder="Enter for Search"/>
             </div>
@@ -40,9 +41,26 @@
             </div>
         </div>
         <div class="message-board wd-60">
-            <div class="contact-nav"></div>
-            <div class="message-list"></div>
-            <div class="sending-section"></div>
+            <div class="contact-nav h-10 pad-_5em border-bottom">
+                    <div class="flex-container space-btw">
+                        <div class="wd-60 flex-container">
+                            <img class="rounded-image wd-10" src="image" alt="" />
+                            <div>
+                                <h4>x.name</h4>
+                                <span>online</span>
+                            </div>
+
+                        </div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+            </div>
+            <div class="message-list h-80"></div>
+            <div class="sending-section border-top h-10">
+                <input type="text" placeholder="type message"/>
+                <button> Send</button>
+            </div>
         </div>
     </div>
 </div>
